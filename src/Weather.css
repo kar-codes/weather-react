@@ -1,0 +1,56 @@
+.Weather {
+    border: 1px solid #dadde1;
+    border-radius: 5px;
+    background-image: url(./images/wallpaper.jpg) ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #ffff;
+    padding: 10px;
+    max-width: 600px;
+    font-family: 'Orbitron', sans-serif;
+}
+
+.search-bar {
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.submit-btn {
+    background-color:#ffff;
+    border-radius: 3px;
+    
+}
+
+.weather-main{
+    background-color:rgba(0, 0, 0, 0.303);
+    text-align: center;
+    font-weight: 600;
+    font-size: large;
+    justify-content: center;
+}
+
+.weather-main img{
+    margin: 0 auto;
+}
+
+.weather-main a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.weather-main li {
+    list-style: none;
+}
+
+.Weather h1 {
+    margin: 10px;
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Pacifico', cursive;
+    font-weight: 100;
+}
+
+.weather-extra li {
+    list-style: none;
+    font-weight: 100;
+}
