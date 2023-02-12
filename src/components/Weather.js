@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import WeatherInfo from "./WeatherInfo"
 import axios from "axios";
 import './Weather.css';
 
@@ -11,11 +12,11 @@ export default function Weather(props){
                 city:response.data.city ,
                 temperature: response.data.temperature.current,
                 icon: response.data.icon_url,
-                time: response.data.time,
+                time: new Date(response.data.time*1000),
                 description: response.data.condition.description ,
-                wind: response.data.temperature.current.speed,
+                wind: response.data.wind.speed,
                 humidity : response.data.temperature.humidity,
-                pressure: response.data.temperature.pressure
+                pressure: response.data.temperature.pressure,
             });
     }
 
@@ -31,28 +32,7 @@ export default function Weather(props){
                 </div>
             </div>
         </form>
-       <h1 className="text-capitalize">{weatherData.city}</h1>
-       <div className="row">
-            <div className="col-12">
-                <div className="weather-main">
-                    <div className="weather-current">
-                        <span className="temperature"> <strong>{Math.round(weatherData.temperature)}</strong></span>
-                        <span className="unit mt-2"> <a href="">ºC</a> | <a href="">ºF</a> </span>
-                    </div>
-                    <img src={weatherData.icon} alt="Sunny" />
-                    <ul className="p-0">
-                        <li className="text-capitalize">{weatherData.description}</li>
-                        <li>{weatherData.time}</li>
-                    </ul>
-                </div>
-            </div>
-       </div>
-       <div className="weather-extra"> 
-            <ul>
-                <li>Humidity: {weatherData.humidity} %</li>
-                <li>Wind: {weatherData.wind} km/h</li>
-            </ul>
-        </div>
+        <WeatherInfo data={weatherData}/>
     </div>
     } else {
         const apiKey = "f4b9b3c3f140t6ca1b114f1eo5df8045";
