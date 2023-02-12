@@ -12,7 +12,7 @@ export default function WeatherInfo(props){
                         <span className="temperature"> <strong>{Math.round(props.data.temperature)}</strong></span>
                         <span className="unit mt-2"> <a href="#">ºC</a> | <a href="#">ºF</a> </span>
                     </div>
-                    <img src={props.data.icon} alt="Sunny" />
+                    <img src={props.data.icon} alt="" />
                     <ul className="p-0">
                         <li className="text-capitalize">{props.data.description}</li>
                         <li><FormattedDate time={props.data.time}/></li>
