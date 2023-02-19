@@ -2,6 +2,8 @@ import React from "react";
 import FormattedDate from "./FormattedDate";
 
 
+
+
 export default function WeatherInfo(props){
     return (<div className="WeatherInfo">
         <h1 className="text-capitalize">{props.data.city}</h1>
