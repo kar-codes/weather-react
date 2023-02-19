@@ -12,7 +12,7 @@ export default function WeatherInfo(props){
             <div className="col-12">
                 <div className="weather-main">
                     <div className="weather-current">
-                        <WeatherTemperature celsius={props.data.temperature}/>
+                        <WeatherTemperature metric={props.data.temperature}/>
                     </div>
                     <img src={props.data.icon} alt="" />
                     <ul className="p-0">
