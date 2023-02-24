@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import WeatherInfo from "./WeatherInfo"
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import './Weather.css';
 
@@ -10,6 +11,7 @@ export default function Weather(props){
             console.log(response.data);
             setWeatherData({
                 ready: true,
+                coordinates: response.data.coordinates,
                 city:response.data.city ,
                 temperature: response.data.temperature.current,
                 icon: response.data.condition.icon_url,
@@ -51,6 +53,7 @@ export default function Weather(props){
             </div>
         </form>
         <WeatherInfo data={weatherData}/>
+        <WeatherForecast coordinates={weatherData.coordinates}/>
     </div>
     } else {
         const apiKey = "f4b9b3c3f140t6ca1b114f1eo5df8045";
