@@ -1,17 +1,16 @@
-import React from "react";
+import React from 'react';
 import 'bootstrap/dist/css/bootstrap.css';
-import Weather from "./components/Weather";
-import Footer from "./components/Footer";
+import Weather from './components/Weather';
+import Footer from './components/UI/Footer';
 
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <h1>Weather App</h1>
         <Weather defaultCity="New York" />
-        <Footer/>
-          </div>
-        </div>
+        <Footer />
+      </div>
+    </div>
   );
 }
 

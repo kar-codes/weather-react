@@ -1,0 +1,20 @@
+export const ICONS = {
+  'few-clouds-night': 'PARTLY_CLOUDY_NIGHT',
+  'clear-sky-day': 'CLEAR_DAY',
+  'few-clouds-day': 'PARTLY_CLOUDY_DAY',
+  'scattered-clouds-day': 'PARTLY_CLOUDY_DAY',
+  'broken-clouds-day': 'PARTLY_CLOUDY_DAY',
+  'shower-rain-day': 'RAIN',
+  'rain-day': 'RAIN',
+  'thunderstorm-day': 'CLOUDY',
+  'snow-day': 'SNOW',
+  'mist-day': 'FOG',
+  'clear-sky-night': 'CLEAR_NIGHT',
+  'scattered-clouds-night': 'PARTLY_CLOUDY_NIGHT',
+  'broken-clouds-night': 'CLOUDY',
+  'shower-rain-night': 'RAIN',
+  'rain-night': 'RAIN',
+  'thunderstorm-night': 'RAIN',
+  'snow-night': 'SNOW',
+  'mist-night': 'FOG'
+};

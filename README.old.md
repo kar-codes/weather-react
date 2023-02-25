@@ -1,2 +1,3 @@
 # weather-react
- Weather app created using React
+
+Weather app created using React
