@@ -3,11 +3,13 @@ import WeatherInfo from "./WeatherInfo"
 import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import './Weather.css';
+import { API_KEY } from "../constants.js/config";
 
 export default function Weather(props){
         const [weatherData, setWeatherData] = useState({ ready: false});
         const [city, setCity] = useState(props.defaultCity);
-            function handleResponse(response){
+
+    function handleResponse(response){
             console.log(response.data);
             setWeatherData({
                 ready: true,
@@ -31,14 +33,16 @@ export default function Weather(props){
     }
 
     function search(){
-        const apiKey = "f4b9b3c3f140t6ca1b114f1eo5df8045";
-        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${API_KEY}&units=metric`;
+
+
         axios.get(apiUrl).then(handleResponse);
     }
 
     function handleCityChange(event){
         setCity(event.target.value);
     }
+  
 
     if (weatherData.ready){
         return <div className="weather container">
@@ -56,8 +60,7 @@ export default function Weather(props){
         <WeatherForecast coordinates={weatherData.coordinates}/>
     </div>
     } else {
-        const apiKey = "f4b9b3c3f140t6ca1b114f1eo5df8045";
-        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric`;
+        let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${API_KEY}&units=metric`;
         axios.get(apiUrl).then(handleResponse);
 
     }
